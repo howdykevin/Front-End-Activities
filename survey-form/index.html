@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey form</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:600" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <header>
+  <h1 id="title">Netflix</h1>
+  <p id="description">Customer Satisfaction Survey Form</p>
+</header>
+<main>
+  <form id="survey-form">
+    <label id="name-label">
+      What is your name?
+      <input type="text" placeholder="Name" id="name" required>
+    </label>
+    <label id="email-label">
+      What is your email address?
+      <input type="email" id="email" placeholder="Email" required >
+    </label>
+    <label id="number-label">
+      What is your age?
+      <input type="number" id="number" placeholder="Age" min="15" max="100" value="15"/>
+      <span class="validate"></span>
+    </label>
+    <label for="consumption">
+      How many times do you watch Netflix in a week?
+      <select id="dropdown">
+        <option value="1">Once</option>
+        <option value="2">Twice</option>
+        <option value="3">Three</option>
+        <option value="4">I am just an addict</option>
+      </select>
+    </label>
+    
+    <fieldset>
+      <legend>What genre of films/movies do you like?</legend>
+      <input id="Crime" type="radio" name="genre" value="crime">Crime<br>
+      <input id="Romance" type="radio" name="genre" value="romance">Romance<br>
+      <input id="Horror" type="radio" name="genre" value="horror">Horror<br>
+      <input id="Comedy" type="radio" name="genre" value="comedy">Comedy<br>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Are you currently satisfied with our service?</legend>
+      <input id="Satisfied" type ="checkbox" name="service" value="satisfied">Satisfied<br>
+      <input id="neutral" type ="checkbox" name="service" value="neutral">Neutral<br>
+      <input id="Bad" type ="checkbox" name="service" value="bad">Not satisfied<br>
+    </fieldset>
+    <div>
+      <textarea rows="15" cols="70">Do you have any feedbacks that you wish to convey?
+      </textarea><br>
+    <input type="submit" id="submit">
+   </div>
+    
+  </form>
+  
+</main>
+  <script src='https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js'></script>
+
+  
+
+</body>
+
+</html>

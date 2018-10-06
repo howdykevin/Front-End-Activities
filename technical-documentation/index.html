@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<nav id='navbar'>
+  <header>
+    Python Documentation
+  </header>
+  <div>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Numbers" class="nav-link">Numbers</a>
+    <a href="#Variables" class="nav-link">Variables</a>
+    <a href="#Strings" class="nav-link">Strings</a>
+    <a href="#Sources" class="nav-link">Sources</a>
+  </div> 
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>
+      Introduction
+    </header>
+    <p>Python is simple to use, but it is a real programming language, offering much more structure and support for large programs than shell scripts or batch files can offer. On the other hand, Python also offers much more error checking than C, and, being a very-high-level language, it has high-level data types built in, such as flexible arrays and dictionaries. Because of its more general data types Python is applicable to a much larger problem domain than Awk or even Perl, yet many things are at least as easy in Python as in those languages.</p>
+    <ul>
+      Python enables programs to be written compactly and readably. Programs written in Python are typically much shorter than equivalent C, C++, or Java programs, for several reasons:
+      <li>The high-level data types allow you to express complex operations in a single statement</li>
+      <li>Statement grouping is done by indentation instead of beginning and ending brackets</li>
+      <li>No variable or argument declarations are necessary.</li>
+    </ul>
+    
+  </section>
+  <section class="main-section" id="Numbers">
+    <header>
+      Numbers
+    </header>
+    <p>
+       Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages (for example, Pascal or C); parentheses (()) can be used for grouping. 
+    </p>
+    <code>
+      <span>>>> 2 + 2</span>
+      <br>
+      <span>4</span>
+      <br>
+      <span>>>> 50 - 5*6</span>
+      <br>
+      <span>20</span>
+      <br>
+      <span>>>> (50 - 5*6) / 4</span>
+      <br>
+      <span>5.0</span>
+      <br>
+      <span>>>> 8 / 5  # division always returns a floating point number</span>
+      <br>
+      <span>1.6</span>
+    </code>
+    <p>
+      Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional result) you can use the // operator; to calculate the remainder you can use %:
+    </p>
+    <code>
+      <span>>>> 17 / 3  # classic division returns a float</span>
+      <br>
+      <span>5.666666666666667</span>
+      <br>
+        <span>>>></span>
+      <br>
+      <span>>>> 17 // 3  # floor division discards the fractional part</span>
+      <br>
+      <span>5</span>
+      <br>
+      <span>>>> 17 % 3  # the % operator returns the remainder of the division</span>
+      <br>
+      <span>2</span>
+      <br>
+      <span>>>> 5 * 3 + 2  # result * divisor + remainder</span>
+      <br>
+      <span>17</span>
+    </code>
+    <p>
+      It is also possible to use the ** operator to calculate powers: 
+    </p>
+    <code>
+      <span>>>> 5 ** 2  # 5 squared</span>
+      <br>
+      <span>25</span>
+      <br>
+      <span>>>> 2 ** 7  # 2 to the power of 7</span>
+      <br>
+      <span>128</span>
+    </code>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>
+      Variables
+    </header>
+    <p>A variable holds a value. You can change the value of a variable at any point.</p>
+    <code>
+      <span>>>>message = "Hello Python world!"</span>
+      <br>
+      <span>>>>print(message)</span>
+      <br>
+      <span></span>
+      <br>
+      <span>>>>message = "Python is my favorite language!"</span>
+      <br>
+      <span>>>>print(message)</span>
+    </code>
+    <br>
+    <ul>
+      <br>
+      Naming Rules:
+      <li>Spaces are not allowed in variable names, so we use underscores instead of spaces. For example, use student_name instead of "student name".</li>
+      <li>Variables can only contain letters, numbers, and underscores. Variable names can start with a letter or an underscore, but can not start with a number.</li>
+      <li>Variable names should be descriptive, without being too long. For example mc_wheels is better than just "wheels", and number_of_wheels_on_a_motorycle.</li>
+    </ul>
+    
+  </section>
+  <section class="main-section" id="Strings">
+    <header>
+      Strings
+    </header>
+    <p>A string is a sequence of one or more characters (letters, numbers, symbols) that can be either a constant or a variable. Made up of Unicode, strings are immutable sequences, meaning they are unchanging.
+Because text is such a common form of data that we use in everyday life, the string data type is a very important building block of programming.</p>
+    <h3>Creating strings</h3>
+    <p>Strings exist within either single quotes ' or double quotes " in Python, so to create a string, enclose a sequence of characters in one or the other.You can choose to use either single quotes or double quotes, but whichever you decide on you should be consistent within a program.</p>
+    <h3>String Concatenation</h3>
+    <p>Concatenation means joining strings together end-to-end to create a new string. To concatenate strings, we use the + operator. Keep in mind that when we work with numbers, + will be an operator for addition, but when used with strings it is a joining operator.
+Let’s combine the strings "Sammy" and "Shark" together with concatenation through a print() statement:</p>
+    <code>
+      <span>>>>print("Sammy" + "Shark")</span>
+      <br>
+      <span>>>>#Output</span>
+      <br>
+      <span>>>>SammyShark</span>
+    </code>
+    <h3>String Replication</h3>
+    <p>There may be times when you need to use Python to automate tasks, and one way you may do this is through repeating a string several times. You can do so with the * operator. Like the + operator, the * operator has a different use when used with numbers, where it is the operator for multiplication. When used with one string and one integer, * is the string replication operator, repeating a single string however many times you would like through the integer you provide.</p>
+  </section>
+  <section class="main-section" id="Sources">
+    <header>
+      Sources
+    </header>
+    <p>Information is derived from the following sources:</p>
+    <ol>
+      <li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-working-with-strings-in-python-3">DigitalOcean</a></li>
+      <li><a href="http://introtopython.org/var_string_num.html">Introtopython</a></li>
+      <li><a href="https://docs.python.org/3/tutorial/">Python.org</a></li>
+    </ol>
+  </section>  
+</main>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

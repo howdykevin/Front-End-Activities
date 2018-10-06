@@ -1,0 +1,76 @@
+body{
+  background-color:transparent;
+  background-image: url("https://cdn.vox-cdn.com/thumbor/AwKSiDyDnwy_qoVdLPyoRPUPo00=/39x0:3111x2048/1400x1400/filters:focal(39x0:3111x2048):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/49901753/netflixlogo.0.0.png");
+  background-position:center;
+  background-size:cover;
+  background-color:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+  background-position:fixed;
+}
+header{
+/*   border:1px solid blue;  */
+  margin:20px auto;
+  border-radius:20px;
+  background-color:hsla(0,80%,30%,0.8);
+  text-align:center;
+  width:70%;
+}
+
+h1{
+  margin:0;
+  font-family:'IBM Plex Sans', sans-serif;
+  font-size:80px;
+  border-bottom:5px solid black;
+}
+
+p{
+  margin:0;
+  font-size:30px;
+}
+
+main{
+  background-color:#d3d3d3;
+  opacity:0.8;
+  border-radius:50px;
+  width:60%;
+  margin:auto;
+}
+form{
+  padding:20px 30px;
+}
+label{
+  display:block;
+  margin-bottom:10px;
+}
+
+#number:invalid+span:after{
+  content:"X";
+  padding-left:5px;
+}
+
+#number:valid+span:after{
+  content:"✓";
+  padding-left:5px;
+}
+
+fieldset{
+  margin-bottom:10px
+}
+
+div{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin-bottom:10px;
+}
+
+#submit{
+  width:30%;
+  border-radius:20px;
+  padding:10px;
+  font-size:18px;
+  align-self:center;
+}
+
+#submit:hover{
+  background-color:#ffa500;
+}
