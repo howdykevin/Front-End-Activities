@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+#body {
+  padding: 0 10px 20px;
+}
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+}
+
+/*changing the font of the text. Able to include many different
+types of fonts that are separated by a comma. If name of font family
+is more than one word, please use qoutation*/
+.new-font {
+  font-family: Roboto,sans-serif;
+/*  font-family: Roboto, Arial, sans-serif;
+*/}
+
+/*You can import other fonts that are not available in your computer 
+by going to fonts.google.com and follow their instructions.
+You will put the link statement in the index.html file and then 
+you can do normal styling */
+
+/* changing font-style */
+#new-font-style{
+  font-style: italic;
+  /*font-style: initial;*/
+}
+
+/*changing font-size. No negative values*/
+.size1{
+  margin-top: 0px;
+  font-size: 80px;
+}
+
+.size2{
+  font-size: 40px;
+}
+
+.size3{
+  font-size: 10px;
+}

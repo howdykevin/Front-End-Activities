@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', Arial, sans-serif;
+  padding-top: 55px;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body { padding: 0 10px 20px; }
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.border-radius{
+  display: inline-block;
+  border: 10px solid blue;
+  width: 200px;
+  height: 200px;
+  /*50% will make the element become a circle*/
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+/*rounding an image using border radius*/
+/*#Round-cat{
+  border-radius: 50%;
+
+}*/
+
+/*rounding an image but by contaning it into a div container and 
+setting the image as a background-image*/
+.round{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border: 3px solid blue;
+  background-image: url(cat.jpg);
+  border-radius: 50%;
+  /*background-position: left ;*/
+}
+
+.cat{
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url(cat.jpg);
+  /*long method to change the radius of each of the corner of image*/
+
+  /*border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-right:25%;
+  border-bottom-left:25%;*/
+
+  /*shorter method to change the radius of each corner of image*/
+                /*TL TR BR BL*/
+  border-radius: 10% 25% 0 50%;
+}

@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', Arial, sans-serif;
+  padding-top: 55px;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body { padding: 0 10px 20px; }
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/*background sizes*/
+
+.tiger {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+
+  background-size: contain;
+
+  background-image: url('tiger.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  border: 10px solid green;
+  background-color: red;
+}
+
+.cat{
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 2px solid blue;
+  background-image: url(cat.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  /*background size variables are contain|cover|%| % %|px| px px|*/
+
+  /*contain allows background image to be contained in the div element*/
+  /*background-size: contain;*/
+
+  /*background image will cover up all the white spaces*/
+  background-size: cover;
+
+  /*if it is just one %, you are changing the width*/
+  /*background-size: 100%;*/
+  /*if you placed 2 %s it just means the width and height of image in %*/
+  /*background-size: 50% 60%;*/
+
+  /*changing width only*/
+  /*background-size: 300px;*/
+  /*changing both width and height*/
+  /*background-size: 200px 200px;*/
+
+
+
+
+}
+
+/*Multiple background*/
+
+.images{
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  border: 3px solid green;
+  /*you can introduce multiple images into an element, just separate 
+  them with a comma*/
+  /*  However, do take note that the images are layered on top of one another
+    so the first mentioned pic will always be the top layer while the 
+    last mentioned pic will always be the bottom layer, meaning that it will
+    always get overlapped by other images.*/
+  background-image: url(cat.jpg),url(tiger.jpg),url("sheep.jpg");
+  background-size: 50%,contain,50%;
+  background-position: left bottom,left center,bottom right;
+  background-repeat: no-repeat;
+
+}

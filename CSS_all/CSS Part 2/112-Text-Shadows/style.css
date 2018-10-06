@@ -1,0 +1,135 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  /*background: linear-gradient(to bottom, #f5f5f5, #fff);*/
+
+
+  height: 100%;
+  font-family: 'Roboto', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body {
+  padding: 55px 10px 20px;
+}
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/*text shadow*/
+
+.shadowed {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  /*text-shadow: 50px   50px      20px      red;*/
+            /* h-off    v-off   blur-radius  color*/
+  /*h-off means x-axis(to the left by default), v-off means y-axis(to bottom by default), blur-radius means bluriness, color*/
+}
+
+
+.test1{
+  text-align: center;
+  font-size: 50px;
+  color: yellow;
+  /*-5 so that the x-axis will be turning to the right instead of left*/
+  text-shadow: -5px 5px 10px blue;
+}
+
+/*Box shadow*/
+
+.box{
+  display:block;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: gold;
+  border: 1px solid black;
+  border-radius: 50%;
+  /*same parameter as the text-shadow*/
+  /*box-shadow: 0px 0px 50px orange;*/
+
+  /*inset box shadow which refers to shadow inside the element*/
+  /*just need to write inset before the parameters*/
+  box-shadow: inset 45px 0px 20px black;
+}
+
+.card{
+  display: inline-block;
+  width: 200px;
+  height: 350px;
+  border: 2px solid black;
+  margin: 15px 8px;
+  text-decoration: none;
+  color: black;
+}
+
+.card-container{
+  padding: 10px;
+}
+
+.card-title{
+  padding: 5px 0px ;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.card-content{
+  font-size: 18px;
+}
+
+.card:hover{
+  box-shadow: 10px 5px 10px grey;
+}
+
+.card:hover .card-title{
+  font-weight: bold;
+}
+
+/*/////////NOTES/////////*/
+/*box shadow and text shadow all have the same parameter, x-axis,y-axis,blurriness and color. */
+/*Only in box shadow can you modify the shadow to be in the box not outside of the box by stating inset before writing the parameters*/

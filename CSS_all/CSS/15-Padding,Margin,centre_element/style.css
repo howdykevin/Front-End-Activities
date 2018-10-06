@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+#padding-test {
+  border-width: 1px;
+  border-color: blue;
+  border-style: solid;
+
+  padding: 6px 0 8px 9px;
+        /*top rht btm left*/
+}
+
+#exercise-padding{
+  border: 2px solid green;
+  padding:5px;
+  /*
+  padding-top:3px; 
+  padding-right:5px;
+  padding-bottom:8px;
+  padding-left:10px; */
+}
+
+#Margin {
+  margin: 10px 15px 20px 25px;
+  border: 2px solid blue;
+}
+
+#Padding{
+  padding: 6px;
+  border: 3px dashed black;
+}
+
+#centre_element {
+  /*to centre an element using margin, simply use margin= auto / margin= 0 auto . Apparently you need to define the
+   width of the element first before it works*/
+  margin: 0 auto;
+  border: 1px solid purple;
+  width: 50px;
+  height:50px;
+}

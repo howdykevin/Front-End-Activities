@@ -1,0 +1,269 @@
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: localRobotoFont;
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: localRobotoFontBlack;
+  src: url('fonts/Roboto-Black.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  background: linear-gradient(to bottom, #f5f5f5, #fff);
+  height: 100%;
+  font-family: localRobotoFont, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav{
+  /*always place display flex in the parent container */
+  /*so that the child elements are all flex-items*/
+  display: flex;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid #ccc;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.brand{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.nav-buttons{
+  text-align: right;
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.nav-buttons a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  /*to add a little bit of margin and padding*/
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.magic{
+  background-color: palegreen;
+  padding: 5px;
+  border: 1px saddlebrown solid;
+}
+
+.body{
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.left-column,
+.center-column,
+.right-column{
+  border:1px solid blue;
+  /* flex parameter grow shrink and flex-basis*/
+  flex:1 1 33%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.left-column a{
+  display: block;
+  border: 1px solid salmon;
+  padding: 5px;
+
+}
+
+.adv{
+  display: block;
+  height: 200px;
+  background-color: plum;
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
+}
+
+.center-column{
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+
+
+.footer{
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  justify-content: space-around;
+  padding: 50px 0;
+  align-self: flex-end;
+  /*height: 300px;*/
+  /*align-items: flex-end;*/
+}
+
+.footer div{
+  flex-basis: 20%;
+  /* border:1px solid blue; */
+}
+
+/*responsive web design using media queries to determine how the
+ page will look like when the browser is shrunk below the 
+ specified max-width*/
+
+@media (max-width: 700px){
+  .footer,
+  .body{
+    flex-wrap: wrap;
+  }
+
+  .adv{
+    display: none;
+  }
+
+  .footer div{
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    /* border: 1px solid white; */
+    margin-bottom: 10px;
+  }
+
+  .left-column,
+  .center-column,
+  .right-column{
+    flex-basis: 100%;
+    flex-shrink: 0;
+  }
+
+  .center-column{order: 1;}
+  .left-column{order: 2;}
+  .right-column{order:3;}
+}
+
+/* if you wish to target the websites 
+greater than 425px width use min-width 
+instead of max-width */
+@media(max-width:425px){
+
+  .left-column,
+  .center-column,
+  .right-column{
+    margin-bottom: 10px;
+    padding: 20px 10px;
+  }
+
+  .adv{
+    display: block;
+  }  
+
+  .footer div{
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 10px 20px;
+    /* border: 1px solid white; */
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+}
+
+/* this following code changes what ppl will see 
+when they print out the webpage */
+@media print{
+  .nav,
+  .footer,
+  .left-column,
+  .right-column{
+    display: none;
+  }
+
+  .center-column{
+    border: 0;
+  }
+}
+
+/* multiple media queries */
+/* changing the properties of class magic
+when width of browser size is 
+between 600px and 1000px;Use the and keyword */
+
+/* @media (min-width:600px) and (max-width:1000px){
+  .magic{
+    background-color: black;
+  }
+} */
+
+/* to target browser size width that is 
+less than 600px and greater than 1000px */
+@media (max-width:600px){
+  .magic{
+    background-color: black;
+  }
+}
+@media (min-width:1000px){
+  .magic{
+    background-color: black;
+  }
+}
+
+/* IMPT to make img responsive, 
+set the width to 100% and height to auto.
+Height auto is the key. Making a video 
+responsive is the same as images.video is a
+html5 element */
+
+/* img{
+  width: 100%;
+   height: auto; 
+} */
+
+/* to make a video responsive with the use of
+iframes, you must first contain the iframe in 
+a container and set its position to absoulute
+like the code below.Standard code below! */
+.videoWrapper {
+  position: relative;
+
+  padding-bottom: 56.25%; /* 16:9 */
+  /* padding-top: 25px; */
+  height: 0;
+  overflow: hidden;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

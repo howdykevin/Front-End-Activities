@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', Arial, sans-serif;
+  padding-top: 55px;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body { padding: 0 10px 20px; }
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+form{
+  border: 3px solid grey;
+  padding: 20px;
+}
+
+label,button{
+  display: block;
+  margin-top: 10px;
+}
+
+button{
+  width: 100px;
+}
+
+/*selecting elements with common attributes*/
+input[type] {
+  /*selecting elements with the type attribute only.Grouping elements
+  together through the use of []. Insert the common "characteristic" of 
+  the elements into the [] */
+  height: 50px;
+  color: green;
+  border: 2px dashed blue;
+
+}
+
+/*selecting elements with a particular attribute that
+has a particular value. In this case type="Email". Case sensitive*/
+input[type="Email"]{
+  border: 1px solid red;
+}
+
+/*selecting elements with a particular attribate that may contaiin 
+a certain value. Use ~=. Case sensitive */
+.fa.fa-address-card-o[title~="bitch"]{
+  border: 1px solid purple;
+  padding: 10px;
+}
+
+/*selecting an element by its attribute and only if that attribute
+starts with certain letters. use ^=. Case sensitive */
+a[href^="/register"]{
+  color: black;
+  text-decoration: line-through;
+  display: inline-block;
+  padding: 15px;
+  margin-top: 15px;
+
+}
+
+/*selecting an element by its attribute and only if that attribute
+ends with certain letters. use $= .Case sensitive*/
+a[href$="Pdf"]{
+  color: pink;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+}
+

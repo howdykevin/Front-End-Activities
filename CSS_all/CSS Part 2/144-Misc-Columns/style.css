@@ -1,0 +1,121 @@
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: localRobotoFont;
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: localRobotoFontBlack;
+  src: url('fonts/Roboto-Black.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  background: linear-gradient(to bottom, #f5f5f5, #fff);
+  height: 100%;
+  font-family: localRobotoFont, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body {
+  padding: 55px 10px 20px;
+}
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 900;
+  font-family: localRobotoFontBlack;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  transition-duration: 250ms;
+  transition-delay: 100ms;
+  transition-property: color, text-shadow;
+  transition-timing-function: ease-in-out;
+}
+
+#page-title:hover {
+  color: #8c1515;
+  text-shadow: none;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+#col {
+  /*normally just used for text*/
+  text-align: justify;
+  columns: 3;
+}
+
+.container{
+  border: 1px solid red;
+  height: 450px;
+  width: 400px;
+  padding: 10px;
+}
+
+/*resizing text area*/
+textarea{
+  /*4 values to resize variable: none|both|vertical|horizontal with none being the most common*/
+  resize: none;
+  height: 450px;
+  width: 390px;
+}
+
+.box{
+  border:1px solid black;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.contentbox{
+  /*default.content-box will cause the total width of the box element to be more than 300px which was what it was stated initially.
+  contentbox will include padding. Total width is 360,300+30padding on each side */
+  box-sizing: content-box;
+  padding: 30px;
+}
+
+.borderbox{
+  /*border-box on the other hand will take into account padding and make sure that the width is still 300px despite the addition of padding
+  There will not be any excess.content width will be reduced to make space for the padding*/
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+/*box sizing is impt because it determines if padding and margin is part of the entire width/height*/

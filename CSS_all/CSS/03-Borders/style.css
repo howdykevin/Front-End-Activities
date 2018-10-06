@@ -1,0 +1,17 @@
+body {
+/*by making margin=0, you are deleting any spaces between the body and the block element nav. Nav block element will stick together
+witht the body element. No spacing in between them */	
+  margin: 0;
+  padding: 0;
+  background-color: #8B4513;
+}
+
+nav {
+	/*border: 2px solid blue;*/
+  border-bottom-width: 1px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 2px solid blue;
+}

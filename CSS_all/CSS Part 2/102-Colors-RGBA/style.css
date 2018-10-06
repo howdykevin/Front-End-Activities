@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', Arial, sans-serif;
+  padding-top: 55px;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body { padding: 0 10px 20px; }
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.half {
+  color: blue;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*rgba stands for red,green,blue and alpha. Alpha means opacity. Opacity has a value range from 0 to 1.*/
+/*rgba allows you to change the opacity of elements separately*/
+.BOMB{
+  color: rgba(255,165,0,0.5);
+  background-color: rgba(49,79,79,1);
+  height: 100px;
+
+}
+
+/*hsl stands for hue saturation brightness.It is similar to rgb as it involves defining colors for the element.
+hsl takes in 3 parameter; the first parameter is any value from 0-360,the second and third parameter is 0 to 100%*/
+
+.hsl{
+  background-color: hsl(180,50%,70%);
+  /*hsla is similar to rgba with the alpha value that controls the opacity of the element*/
+}
+

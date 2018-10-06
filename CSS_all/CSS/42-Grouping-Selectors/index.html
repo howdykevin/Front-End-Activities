@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grouping Selectors</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Shrikhand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <nav>
+      CSS Course by @KalobTaulien
+      <i class="fa fa-twitter"></i>
+    </nav>
+
+    <div id="body">
+      <h1 id="page-title">Grouping Selectors</h1>
+      <!-- Our learning code area -->
+
+        <div class="certain-class1">
+          First element
+        </div>
+        <span class="certain-class2">
+          Second element
+        </span>
+        <p class="certain-class3">
+          Third element
+        </p>
+        <p class="certain-class4">
+          Fourth element
+        </p>
+
+      <!-- End Our learning code area -->
+    </div>
+
+    <div id="body">
+      <h1 id="page-title">Descendant Selectors</h1>
+      <!-- Our learning code area -->
+
+        <div>
+          Div text here
+          <p>
+            Paragraph text here
+            <span>Span text here.change only me</span>
+          </p>
+
+          <span>Another span here</span>
+        </div>
+        <br>
+
+        <span>Another span here</span>
+
+      <!-- End Our learning code area -->
+    </div>
+
+    <div id="body">
+      <h1 id="page-title">Child selectors</h1>
+      
+      <div>
+        <p>FIrst para</p>
+        <p>Second para</p>
+        <p>Third Para</p>
+      </div>
+
+      <span>more</span>
+      <span>less</span>
+
+
+
+    </div>
+
+    <div id="body">
+      <!--selecting an element right after another element -->
+      <h1 id="page-title">Adjacent selectors</h1>
+      <form>
+        <label>Your Name</label>
+        <input type="text">
+        <input type="text">
+      </form>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: kalobsNewFont;
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: kalobsNewFontBlack;
+  src: url('fonts/Roboto-Black.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  background: linear-gradient(to bottom, #f5f5f5, #fff);
+  height: 100%;
+  font-family: kalobsNewFont, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body {
+  padding: 55px 10px 20px;
+}
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 900;
+  font-family: kalobsNewFontBlack;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.box {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+  transition: 250ms width linear,
+              250ms height linear;
+  color: #fff;
+}
+
+.box:hover {
+  width: 200px;
+  height: 200px;
+  color: red;
+}
+
+.box1{
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  color: green;
+  margin-top: 20px;
+  /*transition takes in 3 parameters. The first being the time you want the element fo change from one state to another(in s or ms).The second
+  is the property of the element that you are changing(if you are changing all property, just write all),
+  the third is the timing function(aka speed curve) there are many variables but the most common one is linear or ease*/
+  /*transition: 0.2s all linear;*/
+  /*the long way where you state each property that is changing instead of writing all*/
+  transition: 0.2s color linear,
+              0.2s width linear,
+              0.2s height linear;
+  /*writing the word transition is a shortcut*/
+}
+/*when using transition there must always be a change of state like :hover,:visited etc or else it wouldnt work*/
+.box1:hover{
+  width: 300px;
+  height: 300px;
+  color: red;
+}
+
+.testing{
+  text-decoration: none;
+  color: gold;
+  font-size:25px;
+  /*the long way in applying the transition variable*/
+  transition-duration: 1.3s;/*in seconds or ms*/
+  transition-property: color;
+  transition-timing-function: linear;
+}
+
+.testing:hover{
+  color: blue;
+}
+
+.parent{
+  position: relative;
+  background-color:green;
+  width: 800px;
+  height: 100px;
+
+}
+
+.child{
+  position: absolute;
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  transition-duration: 4s;
+  transition-property: left;
+  /*transition-timing-function part *//*transition-timing-function refers to the speed curveat which the element will change its state*/
+
+/*constant speed throughout*/
+  /*transition-timing-function: linear;*/
+  /*starts slow then speed up*/
+  /*transition-timing-function: ease-in;*/
+  /*starts fast then slow down*/
+  /*transition-timing-function: ease-out;*/
+  /*starts slow then fast then slow down*/
+  /*transition-timing-function: ease-in-out;*/
+  /*default of ease is ease which starts slow then fast then slow,close to constant speed like linear*/
+  transition-timing-function: ease;
+
+  /*transition-delay part*/
+  /*this allows transition to happen only when user place their mouse over the element for the delay duration, 
+  preventing constant activation of transition*/
+  transition-delay: 2s;
+  
+}
+
+.parent:hover .child{
+  /*top: calc(100%-50px);*/
+  left: 750px;
+  top:50px;
+}

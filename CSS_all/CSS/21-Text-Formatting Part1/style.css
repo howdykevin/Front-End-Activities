@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+/*Text color*/
+p.blue {
+  color: blue;
+}
+
+p.red {
+  color: #f00;
+}
+
+p.white {
+  color: rgb(255, 255, 255);
+}
+
+.orange{
+  color: #ffa500;
+}
+
+.pink{
+  color: #ff69b4;
+}
+
+.purple{
+  color: #551A8B;
+}
+
+/*text alignment*/
+.left{
+  text-align: left;
+}
+
+.justfied{
+  text-align: justify;
+}
+
+.right{
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+/*Text-decoration */
+#strike{
+  text-decoration: overline;
+  text-decoration-color: blue;
+  text-decoration-style: dotted;
+  color: green;
+}
+
+/*text-transform. uppercase,lowercase and capitalize. Capitalize causes every first letter of a word to be uppercase*/
+.transform{
+  text-transform: capitalize;
+  border: 1px solid green;
+}
+
+/*text-indent*/
+.indent{
+  text-indent: 50%;
+  /*text-align: justify;*/
+  border: 1px solid blue;
+}

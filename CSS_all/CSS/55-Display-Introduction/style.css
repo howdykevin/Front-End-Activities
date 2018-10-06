@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body {
+  padding: 0 10px 20px;
+}
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+/*changing a default inline element to a block element*/
+span{
+  display: block;
+  border: 1px solid black;
+}
+/*changing a default block element to an inline element*/
+.change{
+  display: inline;
+  border: 1px solid green;
+}
+/*changing a default block ad inline element to an inline block element*/
+.inline-block{
+  display: inline-block;
+  border: 1px solid orange;
+  width: 100px;
+  height:100px;
+  text-align: center;
+}
+
+/*hiding an element completely by making it 
+invisible using display none. Inspecting it 
+will not show up as well*/
+.none{
+  display: none;
+}

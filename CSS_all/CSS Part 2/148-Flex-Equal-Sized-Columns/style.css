@@ -1,0 +1,294 @@
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: localRobotoFont;
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: localRobotoFontBlack;
+  src: url('fonts/Roboto-Black.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  background: linear-gradient(to bottom, #f5f5f5, #fff);
+  height: 100%;
+  font-family: localRobotoFont, Arial, sans-serif;
+  /*overflow-x: hidden;*/
+}
+
+.flex-parent {
+  display: flex;
+  border: 1px solid red;
+}
+
+.box1, .box2, .box3 {
+  border: 1px solid blue;
+  flex-basis: 33%;
+  /*box is allowed to shrink.The value of 1 means True while the value of 0 means False*/
+  flex-shrink: 1;
+  /*box is allowed to grow. The value of 1 means True while the value of 0 means False*/
+  flex-grow: 1;
+}
+/*ensuring all columns are evenly spaced out without the use of float or unnecessarily long code*/
+.exercise-flex{
+  display: flex;
+  margin-top: 15px;
+  border: 1px solid grey;
+  /*this is deafault. Arrange the boxes in a line*/
+/*  flex-direction: row;*/
+  /*reverse order*/
+  flex-direction: row-reverse;
+  /*this arranges the boxes on top of each other*/
+/*  flex-direction: column;*/
+  /*reverse the order*/
+  /*flex-direction: column-reverse;*/
+
+}
+
+.flex1,.flex2,.flex3{
+  border: 1px solid green;
+  /*this determines the width of the containers within the parent element. it is the width property but for flex elements*/
+  flex-basis: 33%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+/*rearranging the columns in flexbox without changing the html code*/
+.flex1{
+  order: 3;
+}
+
+.flex2{
+  order: 1;
+}
+
+.flex3{
+  order: 2;
+}
+
+hr{
+  border: 2px solid black;
+  margin:30px 0;
+}
+
+.row{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  /*border: 2px solid orange;*/
+}
+
+/*.col{
+  border: 1px solid green;
+  flex-basis: 100%;
+}*/
+
+.col1 {
+  flex-basis: 25%;
+  flex-grow: 0;
+  border: 1px solid black;
+}
+
+.col2 {
+  flex-basis: 67%;
+  /*allowed to grow and fill up the unwanted space*/
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: 1px solid black;
+}
+
+.col3 {
+  flex-basis: 100%;
+  border: 1px solid black;
+}
+
+/*flex-wrapping part*/
+
+.run{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col-50{
+  border: 1px solid blue;
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/*vertical alignment flex*/
+.vertical{
+  display: flex;
+  /*you need the flex direction to be column for text to be aligned in the center*/
+  flex-direction: column;
+  /*justify content allows you to vertically align text.Aside from centre, 
+  flex-start places the text on the very top while flex-end places the text on the very bottom*/
+  justify-content: center;
+  text-align: center;
+  margin:15px auto 0;
+  background-color: gold;
+  height: 300px;
+  width: 300px;
+}
+
+/*flexbox align items*/
+.mouth{
+  width: 600px;
+  height: 500px;
+  background-color: pink;
+  border: 10px solid red;
+  display: flex;
+  margin: 15px auto 0;
+  border-radius: 30px;
+  flex-wrap: wrap;
+  /*use align-items in the parent container as you are aligning the things inside.4 different variables,flex-start,flex-end,center and strecth
+  flex-start align items on top,flex-end align items below,center align items on center while strecth allow items to stretch depending 
+  on the height of parent container*/
+  align-items: stretch;
+  /*justify content of the parent container.6 diff values flex-start|flex-end|center|space-around|space-evenly|space-between*/
+  justify-content: space-around;
+  /*you are setting the containers within it as rows*/
+  flex-direction: row;
+  /*IMPT:align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container.
+  When there is only one line, align-content has no effect*/
+  align-content: space-between;
+}
+
+.upper{
+  display: flex;
+  flex-basis: 24.5%;
+  /*the reason why you put flex direction column is because you wish to align the text within 
+  the container not the container. you are setting the text as column.Dont mix it up*/
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 30px;
+  /*max-height: 150px;*/
+  background-color: white;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.c{
+  height: 150px;
+  /*aligning the flex element individually. align-self has 5 different values: flex-start|flex-end|center|baseline|stretch*/
+  align-self: flex-start;
+}
+
+.a{
+  height: 200px;
+  align-self: center;
+}
+
+.lower{
+  display: flex;
+  flex-basis: 24.5%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  flex-grow: 0;
+  flex-shrink: 0;
+  /*max-height: 150px;*/
+  border-radius: 30px;
+  background-color: white;
+  height: 200px;
+}
+
+
+
+
+
+/*A good place to revisit the alignment of flexbox http://flexboxfroggy.com/*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

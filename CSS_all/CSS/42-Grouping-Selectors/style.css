@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+}
+
+#body {
+  padding: 0 10px 20px;
+}
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+.certain-class1,
+.certain-class2,
+.certain-class3,
+.certain-class4 {
+  color: blue;
+  padding: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#body div p span{
+  color: green;
+}
+/*to overwrite specificity, you must write out the same container like the example
+above. */
+#body div p span{
+  color: orange;
+}
+/*more efficient than div p as div>p will only search for the p elements
+whose immediate parent is a div element whereas div p will find all p within div element*/
+div >p{
+  color: purple;
+}
+
+/*adjeacent selection. selecting the element right after 
+another element using a + sign*/
+
+form label + input{
+  border: 2px solid blue;
+  color: white;
+  background-color: black;
+}
+/*as you can see only one of the input is selected unlike 
+label input or label >input where every input element 
+will be affected*/

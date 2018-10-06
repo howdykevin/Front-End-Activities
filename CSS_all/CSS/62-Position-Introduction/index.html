@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Shrikhand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <a href="https://arkmont.com/teachers/kalob.taulien/">
+        CSS Course by @KalobTaulien
+        <i class="fa fa-twitter"></i>
+      </a>
+    </nav>
+
+    <div id="body">
+      <h1 id="page-title">Position</h1>
+      <!-- Our learning code area -->
+
+      <ul>
+        <!--all elements are static in general,by default -->
+        <li>Static</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+      </ul>
+
+
+      <!-- End Our learning code area -->
+    </div>
+    <br>
+    <div id="body">
+      <!--moving an element relative to its original posititon -->
+      <h1 id="page-title">Position:relative</h1>
+      <!--works for any display properties.Block,inline-block or inline -->
+      <div class="relative">
+        relative-test
+      </div>
+
+    </div>
+    <br>
+    <br>
+    <div id="body">
+      <!--moving an element relative to its parent element that contains it.The parent element cannot be static. It must be position:relative-->
+      <h1 id="page-title">Position:Absolute</h1>
+      <div class="rel">
+        <div class="abs">
+          test
+        </div>
+      </div>
+      
+    </div>
+    <br>
+    <div id="body">
+      <!--Element is moved relative to the browser window.Refer to the nav bar element. -->
+      <h1 id="page-title">Position:Fixed</h1>
+      Look at Nav bar
+    </div>
+    <br>
+    <div id="body">
+      <h1 id="page-title">Overlapping element.Z-index CSS</h1>
+      <div class="rel">
+        <div class="pop abs1">abs1</div>
+        <div class="pop abs2">abs2</div>
+      </div>
+
+      
+    </div>
+  </body>
+</html>

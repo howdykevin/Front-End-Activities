@@ -1,0 +1,207 @@
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: localRobotoFont;
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: localRobotoFontBlack;
+  src: url('fonts/Roboto-Black.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  background: linear-gradient(to bottom, #f5f5f5, #fff);
+  height: 100%;
+  font-family: localRobotoFont, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body {
+  padding: 55px 10px 20px;
+}
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 900;
+  font-family: localRobotoFontBlack;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  transition-duration: 250ms;
+  transition-delay: 100ms;
+  transition-property: color, text-shadow;
+  transition-timing-function: ease-in-out;
+}
+
+#page-title:hover {
+  color: #8c1515;
+  text-shadow: none;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/*the default structure to making an animation*/
+@keyframes animationName {
+/*the percentages are timings.for eg if the animation-duration is 4s,0%=0s,50%=2s etc*/
+  0% { ... }
+  50% { ... }
+  75% { ..  }
+  100% { ... }
+}
+
+div#test {
+  animation-name: animationName;
+  /*you must set an animation-duration*/
+  animation-duration: 10s;
+}
+
+@keyframes duckling{
+  0%{
+    left: 10px;
+    /*blinking animation using opacity*/
+    opacity: 1;
+  }
+  10%{
+    left: 15px;
+  }
+  25%{
+    left: 20px;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  50%{
+    left: 80px;
+    background-color: gold;
+    opacity: 1;
+
+  }
+
+  75%{
+    opacity: 0;
+  }
+  100%{
+    transform: rotate(-360deg);
+    border-radius: 50px;
+    background-color: red;
+    left: -200px;
+    opacity: 1;
+
+  }
+  /*after all the animation has happen, the element will snap back to its original form*/
+}
+
+.duck{
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: purple;
+  position: relative;
+
+  animation-name: duckling;
+  animation-duration: 6s;
+  /*to prevent the animation from snapping back to its original form use animation-fill-mode:forwards;*/
+  animation-fill-mode: forwards;
+  /*delays the start of an animation for a period of time*/
+  animation-delay: 2s;
+  /*animation-direction has normal/reverse/alternate/alternate-reverse*/
+  /*normal goes from 0% to 100%*/
+  /*reverse goes from 100% to 0%*/
+  /*alternate goes from 0% to 100% and then from 100% to 0%*/
+  /*alternate-reverse is the opposite of alternate*/
+  animation-direction: reverse;
+
+  /*speed curves:linear/ease/ease-in/ease-out/ease-in-out*/
+  animation-timing-function: ease-in-out;
+    
+    animation-iteration-count: 4;
+
+}
+
+.count-3{
+  /*you are assigning the animation to loop 3 times! animation-iteration-count takes in either a number or infinite as its parameter.*/
+  /*Infinite causes the animation to loop infinitely while setting a number will cause the animation to loop that number of times*/
+  animation-iteration-count: infinite;
+}
+
+@keyframes anime{
+  0%{
+    top: 0;
+    left: 0;
+  }
+  25%{
+    left: 0;
+    top: calc(50% - 100px);
+    
+  }
+  50%{
+    /*when using calc() remember to put spaces before and after - */
+/*    you will realise that height 100% does not respond as height by default depends on the content box.
+     if the parent container height is not defined,the height will automatically be that of the content box.That was why if you type in calc(100%-100px)
+     without specifying the height of the parent-container, nothing will work 
+     https://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work */
+     /*width will take the width of viewport by default if no width is specifie for the parent container*/
+    top: calc(50% - 100px);
+    left: calc(100% - 100px);
+  }
+  75%{
+    left: calc(100% - 100px);
+    top: 0;
+    background-color: yellow;
+  }
+  100%{
+    background-color: green;
+    left: 0;
+    top: 0;
+
+  }
+}
+
+.project{
+  width: 100px;
+  height: 100px;
+  top: 0px;
+  left: 0px;
+  background-color: brown;
+  position: relative;
+  animation-name: anime;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}

@@ -1,0 +1,89 @@
+html{
+  height: 100%;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+    /*the reason why we put 1000px in height and not 100% because the height of the browser(html) is not set.The linear gradient will repeat and will not cover the 
+    whole html page.For 100% height to be successfully executed,set the height of html to be 100%.There will not be a need to state height:100% in body*/
+  /*height:1000px;*/
+  background:linear-gradient(to bottom,#ccc,#000);
+
+  /*repeating linear gradient*/
+  /*background: repeating-linear-gradient(to right, yellow 10%, #009966, purple 50%);*/
+  font-family: 'Roboto', Arial, sans-serif;
+  padding-top: 55px;
+  overflow-x: hidden;
+}
+
+nav {
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-family: 'Shrikhand', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#body { padding: 0 10px 20px; }
+
+#page-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 300;
+}
+
+#footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#footer a {
+  color: #8c1515;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+
+/*linear gradient*/
+.box{
+  background-color: orange;
+  height:200px;
+  /*linear gradient takes in 3 parameter,the 1st the direction of the fade(in deg or in words like "to right"/"to top left").the 2nd parameter is the starting color
+  and the last parameter is the ending color.It is also possible to change the translucency or opacity of the color using rgba,the alpha value from 0 to 1. Changes
+  translucency of color */
+  background:linear-gradient(-150deg,orange,green);
+}
+
+.test{
+  height: 200px;
+  width: 400px;
+  /*radial gradient*/
+  /*you can change the shape of the radial gradient.By default, the shape is an ellipse but you can change it to a circle.Cannot change it to a square because it must be radial*/
+  background:radial-gradient(circle,red,blue,yellow);
+  /*there is repeating-radial-gradient that has the same function as repeating-linear-gradient*/
+}
+
+/*//////////////////////////////////////////IMPT/////////////////////////////////////*/
+
+/*There are 2 gradient tools online that we can use:
+
+Polychroma: https://polychroma.now.sh/
+
+ColorZilla: http://www.colorzilla.com/gradient-editor/*/
